@@ -1,0 +1,1594 @@
+{
+  "prediccion_fecha_iso_hora": {
+    "solicitud": {
+      "tienda_id": 10,
+      "fecha": "2026-03-06T00:00:00Z",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 2
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 10,
+      "fecha": "2026-03-06",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 188.3,
+          "cantidad_sugerida": 243
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 9.0,
+          "cantidad_sugerida": 12
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 316.8,
+          "cantidad_sugerida": 405
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 17.9,
+          "cantidad_sugerida": 18
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 56.5,
+          "cantidad_sugerida": 77
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 50.5,
+          "cantidad_sugerida": 45
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 84.1,
+          "cantidad_sugerida": 79
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 37.3,
+          "cantidad_sugerida": 62
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 49.0,
+          "cantidad_sugerida": 67
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 4.9,
+          "cantidad_sugerida": 6
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 106.1,
+          "cantidad_sugerida": 90
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 144.4,
+          "cantidad_sugerida": 169
+        }
+      ],
+      "calidad": {
+        "estado": "corregido",
+        "observaciones": [
+          {
+            "campo": "fecha",
+            "accion": "reparar",
+            "detalle": "'2026-03-06T00:00:00Z' se interpretó como 2026-03-06"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_ninguno": {
+    "solicitud": {
+      "tienda_id": 7,
+      "fecha": "2026-03-10",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 2
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 7,
+      "fecha": "2026-03-10",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 608.0,
+          "cantidad_sugerida": 784
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 41.3,
+          "cantidad_sugerida": 54
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 334.3,
+          "cantidad_sugerida": 428
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 149.8,
+          "cantidad_sugerida": 148
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 128.3,
+          "cantidad_sugerida": 174
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 170.4,
+          "cantidad_sugerida": 152
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 257.7,
+          "cantidad_sugerida": 242
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 79.1,
+          "cantidad_sugerida": 132
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 226.9,
+          "cantidad_sugerida": 311
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 26.4,
+          "cantidad_sugerida": 30
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 165.0,
+          "cantidad_sugerida": 140
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 177.7,
+          "cantidad_sugerida": 208
+        }
+      ],
+      "calidad": {
+        "estado": "ok",
+        "observaciones": []
+      }
+    }
+  },
+  "prediccion_promo_texto": {
+    "solicitud": {
+      "tienda_id": 6,
+      "fecha": "2026-03-08",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": "2"
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 2
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 6,
+      "fecha": "2026-03-08",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 435.5,
+          "cantidad_sugerida": 562
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 34.9,
+          "cantidad_sugerida": 46
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 326.5,
+          "cantidad_sugerida": 418
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 125.1,
+          "cantidad_sugerida": 124
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 142.8,
+          "cantidad_sugerida": 194
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 348.8,
+          "cantidad_sugerida": 310
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 247.6,
+          "cantidad_sugerida": 233
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 58.8,
+          "cantidad_sugerida": 98
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 156.4,
+          "cantidad_sugerida": 214
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 39.2,
+          "cantidad_sugerida": 45
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 211.1,
+          "cantidad_sugerida": 179
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 222.5,
+          "cantidad_sugerida": 260
+        }
+      ],
+      "calidad": {
+        "estado": "corregido",
+        "observaciones": [
+          {
+            "campo": "familias[1].en_promocion",
+            "accion": "reparar",
+            "detalle": "'2' se interpretó como 2"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_familia_con_espacios": {
+    "solicitud": {
+      "tienda_id": 2,
+      "fecha": "2026-03-09",
+      "familias": [
+        {
+          "familia_id": "  Abarrotes ",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 0
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 2,
+      "fecha": "2026-03-09",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 427.8,
+          "cantidad_sugerida": 552
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 41.4,
+          "cantidad_sugerida": 54
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 305.6,
+          "cantidad_sugerida": 391
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 96.1,
+          "cantidad_sugerida": 95
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 87.8,
+          "cantidad_sugerida": 119
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 243.0,
+          "cantidad_sugerida": 216
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 226.0,
+          "cantidad_sugerida": 212
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 41.0,
+          "cantidad_sugerida": 69
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 165.7,
+          "cantidad_sugerida": 227
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 31.4,
+          "cantidad_sugerida": 36
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 157.9,
+          "cantidad_sugerida": 134
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 173.6,
+          "cantidad_sugerida": 203
+        }
+      ],
+      "calidad": {
+        "estado": "corregido",
+        "observaciones": [
+          {
+            "campo": "familias[0].familia_id",
+            "accion": "reparar",
+            "detalle": "'  Abarrotes ' se interpretó como 'abarrotes'"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_familia_mayusculas": {
+    "solicitud": {
+      "tienda_id": 4,
+      "fecha": "2026-03-05",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "BEBIDAS",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 0
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 4,
+      "fecha": "2026-03-05",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 117.5,
+          "cantidad_sugerida": 152
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 8.1,
+          "cantidad_sugerida": 11
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 204.8,
+          "cantidad_sugerida": 262
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 27.1,
+          "cantidad_sugerida": 27
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 70.5,
+          "cantidad_sugerida": 96
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 50.6,
+          "cantidad_sugerida": 45
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 102.3,
+          "cantidad_sugerida": 96
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 40.6,
+          "cantidad_sugerida": 68
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 47.6,
+          "cantidad_sugerida": 65
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 3.8,
+          "cantidad_sugerida": 4
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 115.1,
+          "cantidad_sugerida": 98
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 132.4,
+          "cantidad_sugerida": 155
+        }
+      ],
+      "calidad": {
+        "estado": "corregido",
+        "observaciones": [
+          {
+            "campo": "familias[2].familia_id",
+            "accion": "reparar",
+            "detalle": "'BEBIDAS' se interpretó como 'bebidas'"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_campo_extra": {
+    "solicitud": {
+      "tienda_id": 10,
+      "fecha": "2026-03-10",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 5
+        }
+      ],
+      "canal": "pos"
+    },
+    "respuesta": {
+      "tienda_id": 10,
+      "fecha": "2026-03-10",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 187.0,
+          "cantidad_sugerida": 241
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 8.1,
+          "cantidad_sugerida": 11
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 265.6,
+          "cantidad_sugerida": 340
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 12.2,
+          "cantidad_sugerida": 12
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 61.3,
+          "cantidad_sugerida": 83
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 58.3,
+          "cantidad_sugerida": 52
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 86.4,
+          "cantidad_sugerida": 81
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 23.4,
+          "cantidad_sugerida": 39
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 38.3,
+          "cantidad_sugerida": 53
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 5.3,
+          "cantidad_sugerida": 6
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 89.9,
+          "cantidad_sugerida": 76
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 152.4,
+          "cantidad_sugerida": 178
+        }
+      ],
+      "calidad": {
+        "estado": "advertencia",
+        "observaciones": [
+          {
+            "campo": "canal",
+            "accion": "advertir",
+            "detalle": "campo desconocido 'canal': se ignoró"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_fecha_dmy": {
+    "solicitud": {
+      "tienda_id": 9,
+      "fecha": "10/03/2026",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 0
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 9,
+      "fecha": "2026-03-10",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 151.6,
+          "cantidad_sugerida": 196
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 6.5,
+          "cantidad_sugerida": 9
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 234.9,
+          "cantidad_sugerida": 301
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 16.8,
+          "cantidad_sugerida": 17
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 46.8,
+          "cantidad_sugerida": 64
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 52.4,
+          "cantidad_sugerida": 47
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 95.3,
+          "cantidad_sugerida": 90
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 38.9,
+          "cantidad_sugerida": 65
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 61.9,
+          "cantidad_sugerida": 85
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 5.8,
+          "cantidad_sugerida": 7
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 70.6,
+          "cantidad_sugerida": 60
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 119.8,
+          "cantidad_sugerida": 140
+        }
+      ],
+      "calidad": {
+        "estado": "advertencia",
+        "observaciones": [
+          {
+            "campo": "fecha",
+            "accion": "advertir",
+            "detalle": "'10/03/2026' es ambigua; se asumió día/mes (2026-03-10)"
+          }
+        ]
+      }
+    }
+  },
+  "observacion_valida": {
+    "solicitud": {
+      "tienda_id": 1,
+      "fecha": "2026-03-01",
+      "ventas": [
+        {
+          "familia_id": "abarrotes",
+          "ventas": 793
+        },
+        {
+          "familia_id": "bebe",
+          "ventas": 113
+        },
+        {
+          "familia_id": "bebidas",
+          "ventas": 777
+        },
+        {
+          "familia_id": "carnes",
+          "ventas": 282
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "ventas": 301
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "ventas": 451
+        },
+        {
+          "familia_id": "lacteos",
+          "ventas": 501
+        },
+        {
+          "familia_id": "licores",
+          "ventas": 130
+        },
+        {
+          "familia_id": "limpieza",
+          "ventas": 390
+        },
+        {
+          "familia_id": "mascotas",
+          "ventas": 95
+        },
+        {
+          "familia_id": "panaderia",
+          "ventas": 382
+        },
+        {
+          "familia_id": "snacks",
+          "ventas": 451
+        }
+      ]
+    },
+    "respuesta": {
+      "registros_guardados": 12,
+      "calidad": {
+        "estado": "ok",
+        "observaciones": []
+      }
+    }
+  },
+  "observacion_reenviada": {
+    "solicitud": {
+      "tienda_id": 1,
+      "fecha": "2026-03-01",
+      "ventas": [
+        {
+          "familia_id": "abarrotes",
+          "ventas": 793
+        },
+        {
+          "familia_id": "bebe",
+          "ventas": 113
+        },
+        {
+          "familia_id": "bebidas",
+          "ventas": 777
+        },
+        {
+          "familia_id": "carnes",
+          "ventas": 282
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "ventas": 301
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "ventas": 451
+        },
+        {
+          "familia_id": "lacteos",
+          "ventas": 501
+        },
+        {
+          "familia_id": "licores",
+          "ventas": 130
+        },
+        {
+          "familia_id": "limpieza",
+          "ventas": 390
+        },
+        {
+          "familia_id": "mascotas",
+          "ventas": 95
+        },
+        {
+          "familia_id": "panaderia",
+          "ventas": 382
+        },
+        {
+          "familia_id": "snacks",
+          "ventas": 451
+        }
+      ]
+    },
+    "respuesta": {
+      "registros_guardados": 0,
+      "calidad": {
+        "estado": "ok",
+        "observaciones": []
+      }
+    }
+  },
+  "prediccion_promo_decimal_coma": {
+    "solicitud": {
+      "tienda_id": 7,
+      "fecha": "2026-03-06",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": "2,0"
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 0
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 7,
+      "fecha": "2026-03-06",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 813.4,
+          "cantidad_sugerida": 1049
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 56.8,
+          "cantidad_sugerida": 74
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 332.4,
+          "cantidad_sugerida": 426
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 181.0,
+          "cantidad_sugerida": 179
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 132.9,
+          "cantidad_sugerida": 181
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 232.7,
+          "cantidad_sugerida": 207
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 342.5,
+          "cantidad_sugerida": 322
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 130.4,
+          "cantidad_sugerida": 218
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 257.5,
+          "cantidad_sugerida": 353
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 37.9,
+          "cantidad_sugerida": 43
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 209.4,
+          "cantidad_sugerida": 178
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 173.3,
+          "cantidad_sugerida": 203
+        }
+      ],
+      "calidad": {
+        "estado": "corregido",
+        "observaciones": [
+          {
+            "campo": "familias[3].en_promocion",
+            "accion": "reparar",
+            "detalle": "'2,0' se interpretó como 2"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_campo_renombrado": {
+    "solicitud": {
+      "fecha": "2026-03-09",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 5
+        }
+      ],
+      "store_id": 6
+    },
+    "respuesta": {
+      "tienda_id": 6,
+      "fecha": "2026-03-09",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 378.6,
+          "cantidad_sugerida": 488
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 25.1,
+          "cantidad_sugerida": 33
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 283.6,
+          "cantidad_sugerida": 363
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 88.7,
+          "cantidad_sugerida": 88
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 152.8,
+          "cantidad_sugerida": 208
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 265.7,
+          "cantidad_sugerida": 236
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 238.0,
+          "cantidad_sugerida": 224
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 43.2,
+          "cantidad_sugerida": 72
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 194.5,
+          "cantidad_sugerida": 266
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 35.1,
+          "cantidad_sugerida": 40
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 156.3,
+          "cantidad_sugerida": 133
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 199.7,
+          "cantidad_sugerida": 234
+        }
+      ],
+      "calidad": {
+        "estado": "corregido",
+        "observaciones": [
+          {
+            "campo": "tienda_id",
+            "accion": "reparar",
+            "detalle": "el campo 'store_id' se interpretó como 'tienda_id'"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_faltan_familias": {
+    "solicitud": {
+      "tienda_id": 9,
+      "fecha": "2026-03-08",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 0
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 9,
+      "fecha": "2026-03-08",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 116.8,
+          "cantidad_sugerida": 151
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 4.9,
+          "cantidad_sugerida": 6
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 156.7,
+          "cantidad_sugerida": 201
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 13.5,
+          "cantidad_sugerida": 13
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 33.8,
+          "cantidad_sugerida": 46
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 33.2,
+          "cantidad_sugerida": 30
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 50.8,
+          "cantidad_sugerida": 48
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 20.5,
+          "cantidad_sugerida": 34
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 38.9,
+          "cantidad_sugerida": 53
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 3.0,
+          "cantidad_sugerida": 3
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 56.2,
+          "cantidad_sugerida": 48
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 81.3,
+          "cantidad_sugerida": 95
+        }
+      ],
+      "calidad": {
+        "estado": "advertencia",
+        "observaciones": [
+          {
+            "campo": "familias",
+            "accion": "advertir",
+            "detalle": "faltaban 2 familias (panaderia, snacks): se pronosticaron asumiendo 0 productos en promoción"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_tienda_prefijo": {
+    "solicitud": {
+      "tienda_id": "T05",
+      "fecha": "2026-03-10",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "bebe",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "bebidas",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "carnes",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "en_promocion": 2
+        },
+        {
+          "familia_id": "lacteos",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "licores",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "limpieza",
+          "en_promocion": 0
+        },
+        {
+          "familia_id": "mascotas",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "panaderia",
+          "en_promocion": 5
+        },
+        {
+          "familia_id": "snacks",
+          "en_promocion": 0
+        }
+      ]
+    },
+    "respuesta": {
+      "tienda_id": 5,
+      "fecha": "2026-03-10",
+      "version_modelo": "1",
+      "predicciones": [
+        {
+          "familia_id": "abarrotes",
+          "venta_esperada": 935.8,
+          "cantidad_sugerida": 1207
+        },
+        {
+          "familia_id": "bebe",
+          "venta_esperada": 84.8,
+          "cantidad_sugerida": 111
+        },
+        {
+          "familia_id": "bebidas",
+          "venta_esperada": 852.7,
+          "cantidad_sugerida": 1091
+        },
+        {
+          "familia_id": "carnes",
+          "venta_esperada": 200.0,
+          "cantidad_sugerida": 198
+        },
+        {
+          "familia_id": "cuidado_personal",
+          "venta_esperada": 216.9,
+          "cantidad_sugerida": 295
+        },
+        {
+          "familia_id": "frutas_verduras",
+          "venta_esperada": 389.6,
+          "cantidad_sugerida": 347
+        },
+        {
+          "familia_id": "lacteos",
+          "venta_esperada": 410.1,
+          "cantidad_sugerida": 385
+        },
+        {
+          "familia_id": "licores",
+          "venta_esperada": 97.1,
+          "cantidad_sugerida": 162
+        },
+        {
+          "familia_id": "limpieza",
+          "venta_esperada": 209.2,
+          "cantidad_sugerida": 287
+        },
+        {
+          "familia_id": "mascotas",
+          "venta_esperada": 53.4,
+          "cantidad_sugerida": 61
+        },
+        {
+          "familia_id": "panaderia",
+          "venta_esperada": 273.4,
+          "cantidad_sugerida": 232
+        },
+        {
+          "familia_id": "snacks",
+          "venta_esperada": 274.0,
+          "cantidad_sugerida": 321
+        }
+      ],
+      "calidad": {
+        "estado": "corregido",
+        "observaciones": [
+          {
+            "campo": "tienda_id",
+            "accion": "reparar",
+            "detalle": "'T05' se interpretó como 5"
+          }
+        ]
+      }
+    }
+  },
+  "prediccion_rechazada": {
+    "solicitud": {
+      "tienda_id": 99,
+      "fecha": "2026-03-01",
+      "familias": [
+        {
+          "familia_id": "abarrotes",
+          "en_promocion": 0
+        }
+      ]
+    },
+    "respuesta": {
+      "status": 422,
+      "detail": "La tienda 99 no existe en el catálogo."
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "dias": [
+    {
+      "fecha": "2026-03-01",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-02",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-03",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-04",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-05",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-06",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-07",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-08",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-09",
+      "predicciones": 120
+    },
+    {
+      "fecha": "2026-03-10",
+      "predicciones": 120
+    }
+  ],
+  "problemas": {
+    "fecha_iso_hora": {
+      "200": 4
+    },
+    "ninguno": {
+      "200": 52
+    },
+    "promo_texto": {
+      "200": 4
+    },
+    "familia_con_espacios": {
+      "200": 4
+    },
+    "familia_mayusculas": {
+      "200": 4
+    },
+    "campo_extra": {
+      "200": 6
+    },
+    "fecha_dmy": {
+      "200": 5
+    },
+    "promo_decimal_coma": {
+      "200": 3
+    },
+    "campo_renombrado": {
+      "200": 6
+    },
+    "faltan_familias": {
+      "200": 8
+    },
+    "tienda_prefijo": {
+      "200": 4
+    }
+  },
+  "reentrenamiento": {
+    "id": "manual__2026-11-15T05:10:27.336935+00:00",
+    "estado": "exitoso",
+    "promovido": true,
+    "version": "3",
+    "motivo": "Costo en validación 36 641 vs 36 641 del vigente (tolerancia 2%; mejora al baseline 37 279)",
+    "segundos": 35
+  }
+}
