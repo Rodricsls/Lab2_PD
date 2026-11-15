@@ -1,0 +1,13 @@
+familia_id,costo_faltante,costo_sobrante
+abarrotes,1.0,0.1
+bebidas,1.5,0.1
+lacteos,1.5,2.0
+carnes,1.5,2.0
+panaderia,1.0,0.1
+frutas_verduras,1.5,0.1
+limpieza,1.5,2.0
+cuidado_personal,2.0,0.1
+licores,2.0,2.0
+snacks,1.5,0.5
+bebe,2.0,0.1
+mascotas,1.5,0.1
