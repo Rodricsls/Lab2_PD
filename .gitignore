@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.cache/
+*.egg-info/
+
+# Credenciales y datos: nunca en el repositorio
+.env
+datos/publicados/*
+!datos/publicados/.gitkeep
+
+.claude/settings.local.json
+.claude/worktrees/
+.DS_Store
+Thumbs.db

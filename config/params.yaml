@@ -1,0 +1,45 @@
+# Configuración versionada del producto. La justificación de cada valor está en DECISIONES.md.
+
+modelo:
+  nombre: novamercado-ventas
+  alias: champion
+  experimento: novamercado-ventas
+
+entrenamiento:
+  # Últimos días con ventas conocidas que se reservan para calibrar el factor de cada familia.
+  dias_calibracion: 14
+  semilla: 42
+  lightgbm:
+    objective: regression_l1
+    learning_rate: 0.05
+    num_leaves: 31
+    min_data_in_leaf: 40
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 1
+    num_boost_round: 400
+    deterministic: true
+    force_row_wise: true
+  # Factor de la cantidad sugerida: se busca en esta grilla el que minimiza el costo.
+  factor_min: 0.5
+  factor_max: 2.0
+  factor_paso: 0.01
+
+promocion:
+  # Ventana de comparación: días con ventas posteriores a los datos del vigente (ninguno de
+  # los modelos comparados los vio), como máximo los últimos dias_ventana.
+  dias_ventana: 14
+  # Con menos días nuevos que estos no hay evidencia suficiente: el vigente se conserva.
+  dias_minimos: 7
+  # El challenger se promueve si su costo en la ventana no supera al del vigente en más de
+  # esta fracción y además le gana al baseline.
+  tolerancia: 0.02
+
+servicio:
+  segundos_recarga_modelo: 30
+  segundos_chequeo_salud: 10
+  segundos_timeout_dependencias: 3
+  # Si la similitud de un nombre de familia con el catálogo está entre estos dos valores se
+  # responde con advertencia; por encima del primero se repara.
+  similitud_reparar: 0.88
+  similitud_advertir: 0.75
