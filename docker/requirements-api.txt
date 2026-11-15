@@ -1,0 +1,13 @@
+# Versiones fijas: las mismas que la imagen de Airflow (pandas, numpy) para que un modelo
+# entrenado en el DAG se cargue igual en la API.
+fastapi==0.163.0
+uvicorn==0.54.0
+pydantic==2.14.3
+pandas==3.0.5
+numpy==2.5.3
+lightgbm==4.7.0
+mlflow-skinny==3.18.0
+psycopg2-binary==2.9.13
+httpx==0.28.1
+pyyaml==6.0.3
+joblib==1.5.3

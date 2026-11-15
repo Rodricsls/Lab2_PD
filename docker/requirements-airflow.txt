@@ -1,0 +1,5 @@
+# Se instala sobre apache/airflow:3.3.2-python3.12 (ya trae pandas 3.0.5, numpy 2.5.3,
+# psycopg2 2.9.13, httpx y pyyaml).
+lightgbm==4.7.0
+mlflow-skinny==3.18.0
+joblib==1.5.3

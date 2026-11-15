@@ -1,0 +1,211 @@
+# NovaMercado · producto completo con un comando:  docker compose up -d --build
+#
+#   api           FastAPI :8000            pronóstico, observaciones, administración
+#   postgres-app  base del producto        solicitudes, predicciones, observaciones
+#   mlflow        :5000                    experimentos y Model Registry (alias @champion)
+#   inicializador (una vez por arranque)   carga datos y entrena el primer modelo si no hay
+#   airflow-*     :8080                    DAG de reentrenamiento (con su propio postgres)
+#
+# Datos publicados: ./datos/publicados (solo lectura). Credenciales: archivo .env
+# (copiar .env.example). Todo lo que debe sobrevivir a un reinicio vive en volúmenes.
+
+x-novamercado-env: &novamercado-env
+  DATABASE_URL: postgresql://${APP_DB_USER}:${APP_DB_PASSWORD}@postgres-app:5432/${APP_DB_NAME}
+  MLFLOW_TRACKING_URI: http://mlflow:5000
+  AIRFLOW_URL: http://airflow-apiserver:8080
+  AIRFLOW_USUARIO: ${AIRFLOW_ADMIN_USER}
+  AIRFLOW_CLAVE: ${AIRFLOW_ADMIN_PASSWORD}
+  DATOS_DIR: /datos
+  # Si MLflow no responde, fallar rápido en lugar de reintentar varios minutos.
+  MLFLOW_HTTP_REQUEST_MAX_RETRIES: "1"
+  MLFLOW_HTTP_REQUEST_TIMEOUT: "15"
+  MLFLOW_DISABLE_AGENT_HINT: "1"
+
+x-airflow-common: &airflow-common
+  build:
+    context: .
+    dockerfile: docker/Dockerfile.airflow
+  image: novamercado/airflow:3.3.2
+  environment: &airflow-env
+    <<: *novamercado-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${AIRFLOW_DB_USER}:${AIRFLOW_DB_PASSWORD}@postgres-airflow/${AIRFLOW_DB_NAME}
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:-}
+    AIRFLOW__CORE__DAGS_FOLDER: /opt/novamercado/dags
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://airflow-apiserver:8080/execution/
+    AIRFLOW__API_AUTH__JWT_SECRET: ${AIRFLOW_JWT_SECRET}
+    AIRFLOW__API_AUTH__JWT_ISSUER: airflow
+    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
+    AIRFLOW__DAG_PROCESSOR__REFRESH_INTERVAL: "30"
+    AIRFLOW__FAB__AUTH_BACKENDS: airflow.providers.fab.auth_manager.api.auth.backend.basic_auth
+    PYTHONPATH: /opt/novamercado/src
+    PARAMS_PATH: /opt/novamercado/config/params.yaml
+  volumes:
+    - ./dags:/opt/novamercado/dags:ro
+    - ./src:/opt/novamercado/src:ro
+    - ./config:/opt/novamercado/config:ro
+    - ./datos/publicados:/datos:ro
+    - airflow-logs:/opt/airflow/logs
+  user: "${AIRFLOW_UID:-50000}:0"
+  depends_on: &airflow-depends
+    postgres-airflow:
+      condition: service_healthy
+
+services:
+  postgres-app:
+    image: postgres:16.10-bookworm
+    environment:
+      POSTGRES_USER: ${APP_DB_USER}
+      POSTGRES_PASSWORD: ${APP_DB_PASSWORD}
+      POSTGRES_DB: ${APP_DB_NAME}
+    volumes:
+      - app-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${APP_DB_USER} -d ${APP_DB_NAME}"]
+      interval: 5s
+      retries: 20
+    restart: unless-stopped
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v3.18.0
+    command:
+      - mlflow
+      - server
+      - --host=0.0.0.0
+      - --port=5000
+      - --backend-store-uri=sqlite:////mlflow/mlflow.db
+      - --artifacts-destination=/mlflow/artifacts
+      - --serve-artifacts
+      - --allowed-hosts=mlflow,mlflow:5000,localhost,localhost:5000,127.0.0.1,127.0.0.1:5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow-datos:/mlflow
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://localhost:5000/health', timeout=4)"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+    restart: unless-stopped
+
+  inicializador:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    image: novamercado/api:1.0
+    command: ["python", "-m", "novamercado.operacion"]
+    environment:
+      <<: *novamercado-env
+    volumes:
+      - ./datos/publicados:/datos:ro
+    depends_on:
+      postgres-app:
+        condition: service_healthy
+      mlflow:
+        condition: service_healthy
+    restart: on-failure:3
+
+  api:
+    image: novamercado/api:1.0
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    environment:
+      <<: *novamercado-env
+      CACHE_MODELO: /cache
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./datos/publicados:/datos:ro
+      - api-cache:/cache
+    depends_on:
+      postgres-app:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres-airflow:
+    image: postgres:16.10-bookworm
+    environment:
+      POSTGRES_USER: ${AIRFLOW_DB_USER}
+      POSTGRES_PASSWORD: ${AIRFLOW_DB_PASSWORD}
+      POSTGRES_DB: ${AIRFLOW_DB_NAME}
+    volumes:
+      - airflow-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${AIRFLOW_DB_USER} -d ${AIRFLOW_DB_NAME}"]
+      interval: 5s
+      retries: 20
+    restart: unless-stopped
+
+  airflow-init:
+    <<: *airflow-common
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        mkdir -p /opt/airflow/logs && chown -R "${AIRFLOW_UID:-50000}:0" /opt/airflow/logs
+        /entrypoint airflow version
+    environment:
+      <<: *airflow-env
+      _AIRFLOW_DB_MIGRATE: "true"
+      _AIRFLOW_WWW_USER_CREATE: "true"
+      _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_ADMIN_USER}
+      _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD}
+    user: "0:0"
+
+  airflow-apiserver:
+    <<: *airflow-common
+    command: api-server
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/api/v2/monitor/health"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-depends
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: ["CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-depends
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-dag-processor:
+    <<: *airflow-common
+    command: dag-processor
+    healthcheck:
+      test: ["CMD-SHELL", 'airflow jobs check --job-type DagProcessorJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-depends
+      airflow-init:
+        condition: service_completed_successfully
+
+volumes:
+  app-db:
+  airflow-db:
+  mlflow-datos:
+  api-cache:
+  airflow-logs:
